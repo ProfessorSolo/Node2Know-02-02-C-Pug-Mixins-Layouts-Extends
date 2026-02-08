@@ -1,0 +1,5 @@
+mixin thingCard(thing)
+  li.thing-item
+    a(href="/things/" + thing.id, style="display: block; text-decoration: none; color: inherit;") 
+      h4= thing.name 
+      p= thing.description

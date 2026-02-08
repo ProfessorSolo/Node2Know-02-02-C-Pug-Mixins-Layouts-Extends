@@ -1,0 +1,25 @@
+extends layouts/sidebar-layout
+include mixins/thingMixin
+
+block main-content
+  article.card
+    header
+      h2 Inventory Log
+      if things.length > 0 
+        h3 [ DATA STREAM ACTIVE ]
+      else 
+        h3 [ NO DATA DETECTED ]
+    section
+      if things.length > 0
+        ul.thing-list
+          each thing in things
+            +thingCard(thing)
+      else
+          p.bio
+            | "This area is designated for Thing containment. Do not feed the objects."
+          p
+            | No things found in the database.
+          h4 // Status_Report
+          ul
+            li Data Source: null
+            li Render Mode: Empty State

@@ -1,0 +1,27 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title #{title || 'Pug Layouts'} - Professor Solo
+    link(rel="preconnect", href="https://fonts.googleapis.com")
+    link(rel="preconnect", href="https://fonts.gstatic.com", crossorigin)
+    link(href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;600&family=Inter:wght@300;400;600;700&family=Orbitron:wght@400;500;700;900&display=swap", rel="stylesheet")
+    link(rel="stylesheet", href="/styles/style.css")
+    link(rel="icon", type="image/png", href="/favicon.png")
+    link(rel="icon", type="image/png", href="/favicon-96x96.png", sizes="96x96")
+    link(rel="apple-touch-icon", href="/apple-touch-icon.png")
+    link(rel="manifest", href="/site.webmanifest")
+  body
+    header
+      nav
+        a(href="/") Home
+        a(href="/about") About
+        a(href="/josh") Josh
+        a(href="/things") Things
+      h1 // #{title || 'Pug_Project'}
+    main
+      block content
+    footer
+      p &copy; 2026 Josh Solomon - Professor Solo | License: Node2Know Learner License 1.0 (Node2Know-LEARN-1.0)

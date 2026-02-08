@@ -1,0 +1,21 @@
+extends layouts/main-layout
+
+block content
+  article.card
+    header
+      h2 Pug (formerly Jade)
+      h3= message
+    section
+      - const functionality = "Layouts & Mixins"
+      p.bio
+        | "We are currently demonstrating: " + functionality
+      p
+        | Pug compiles to HTML and has a simplified syntax. It uses indentation for nesting and supports variables, loops, and mixins.
+      h4 // Features_Log
+      ul
+        li Concise Syntax
+        li Template Inheritance
+        li Mixins for Reusability
+        li Powerful Iteration
+        li Indentation Based
+        li Inline JavaScript

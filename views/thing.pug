@@ -1,0 +1,12 @@
+extends layouts/main-layout
+
+block content
+  article.card
+    header
+      h2= thing.name
+      h3 ID: #{thing.id}
+    section
+      p.bio= thing.description
+      
+      div.actions(style="margin-top: 2rem;")
+        a(href="/things") &larr; Back to Inventory
